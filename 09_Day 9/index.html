@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PORTFOLIO WEBSITE</title>
+    <link rel="stylesheet" href="./styles/style.css">
+  </head>
+  <body>
+    <nav class="desktop-nav">
+      <div class="logo">Pasang</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <nav class="hamburger-nav">
+      <div class="logo">Pasang</div>
+
+      <div class="hamburger-menu">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Profile Section Start -->
+
+    <section class="profile">
+      <div class="section__picture-container">
+        <img src="./assets/coat.jpg" alt="My profile picture" />
+      </div>
+
+      <div class="sectioin__text">
+        <p class="section__text__p1">Hello, I am</p>
+        <h1 class="title">Pasang Dolmo Tamang</h1>
+        <p class="section__text__p2">Frontend Developer</p>
+        <div class="btn-container">
+          <button class="btn btn-color-1" onclick="window.open('./assets/Pasang Dolmo Tamang.pdf')">Download CV</button>
+          <button class="btn btn-color-2">Contact Me</button>
+        </div>
+
+        <div class="social-container">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/800px-LinkedIn_logo_initials.png"
+            alt="linkedin profile"
+            width="50"
+            class="icon"
+            onclick="openLinkdin()"
+          />
+
+          <img
+            src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+            alt="github profile"
+            width="50"
+            class="icon"
+            onclick="openGithub()"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- Profile Section End -->
+
+
+    <!-- About Section Start -->
+    <!-- About Section End -->
+
+    <script>
+      function openGithub(){
+        window.location.href = 'https://github.com/Pasang-Tamang'
+      }
+
+     
+    </script>
+  </body>
+
+
+</html>
