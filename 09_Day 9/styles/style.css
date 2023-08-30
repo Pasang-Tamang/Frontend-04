@@ -251,6 +251,7 @@ article {
 #projects {
   width: 60%;
   margin: 7rem auto;
+ 
 }
 
 #projects .title {
@@ -280,3 +281,5 @@ article {
 .project-btn {
   color: black;
 }
+
+
