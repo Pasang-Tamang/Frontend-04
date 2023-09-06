@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Comparison Operator
+
+      let a = 30;
+      let b = "30";
+
+      console.log("a == b", a == b);
+      console.log("a === b", a === b);
+
+      console.log(a != b);
+      console.log(a !== b);
+
+      let x = 10;
+      let y = 30;
+      console.log("x > y", x > y);
+      console.log("x<y", x < y);
+
+      //Concat String;
+      let text1 = "A quick brown fox";
+      let text2 = "jumps over lazy dog";
+      let text3 = ".";
+
+      const thirdString = text1 + " " + text2 + text3;
+      console.log(thirdString);
+
+      //Converting String to Number
+      let string1 = "ABC";
+      let string2 = "55";
+
+      const changeString1Num = Number(string1);
+      const changeString2Num = Number(string2);
+      console.log(changeString1Num, changeString2Num);
+
+      console.log(
+        string2,
+        typeof string2,
+        changeString2Num,
+        typeof changeString2Num
+      );
+
+      //Logical Operator
+
+      //Logical Not
+      console.log;
+
+      let email = null;
+      let password = "pw";
+      if (!email) {
+        console.log("Enter email to continue");
+      }
+      console.log("email", !email);
+      console.log("password", !password);
+
+      //Logical AND
+      let student1 = 21;
+      let student2 = 15;
+      console.log("You can enter a club", student1 >= 18 && student2 >= 18);
+      console.log("You can enter a club", student1 >= 18 || student2 >= 18);
+
+      //Object -> Arrays
+
+      let carModel1 = {
+        "first Name": "Mercedez",
+        "last Name": "Benz",
+        builtYear: 2012,
+        madeIn: "USA",
+        kilometersRun: 90000,
+        color: "Blue",
+        isSold: false,
+        address: {
+          city: "Washington",
+          postalCode: [
+            "1",
+            2,
+            {
+              tes: "abc",
+            },
+          ],
+          ownerDetails: {
+            ownerName: "Haris",
+            phoneNum: 999,
+          },
+        },
+      };
+      console.log(carModel1);
+      //console.log(carModel1["name"]);
+      //console.log(carModel1.name);
+      console.log(carModel1["first Name"]);
+      console.log(carModel1["last Name"]);
+      console.log(carModel1["builtYear"] > 2015);
+      console.log(carModel1.address.ownerDetails.ownerName);
+      console.log(carModel1["address"]["ownerDetails"]["phoneNum"]);
+
+      //Array -> Object
+      const arr = [1, 2, 3, 4, 5];
+
+      console.log(arr);
+      console.log(arr.length);
+      console.log(arr[0]);
+      console.log(arr[3]);
+      console.log(arr[4]);
+      console.log(arr[5]);
+      console.log(arr[arr.length - 1]);
+
+      const array = [1, 2, 3, 4, 5, 6, 1457, 12338, "Ram", "Shaym"];
+
+      console.log(array[array.length - 1]);
+
+      const arr3 = ["car", " j", "z", carModel1];
+      const lastLength = arr3.length - 1;
+
+      console.log(arr3[lastLength]);
+    </script>
+  </body>
+</html>
