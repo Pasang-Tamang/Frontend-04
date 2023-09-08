@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //100 sum 1+2+3+4
+
+      //   const str = prompt("Enter a number");
+      //   const num = Number(str);
+
+      //   function sumOfSeries(a) {
+      //     const sum = a * (a + 1);
+      //     const div = sum / 2;
+      //     console.log(div);
+      //   }
+      //   sumOfSeries(num);
+
+      const str = prompt("Enter a number");
+      const num = Number(str);
+
+      function checkPrime(num, message) {
+        let isPrime = true;
+        for (let i = 2; i < num; i++) {
+          if (num % i === 0) {
+            isPrime = false;
+            break;
+          }
+        }
+
+        if (isPrime) {
+          document.write("It is ", message, "and a prime number");
+        } else {
+          document.write("It is ", message, "and not a prime number");
+        }
+      }
+
+      function oddEven() {
+        if (num % 2 == 0) {
+          checkPrime(num, "even");
+        } else {
+          checkPrime(num, "odd");
+        }
+      }
+
+      for (let i = 5; i <= num - 5; i++) {
+        if (i % 5 === 0) {
+          oddEven(i);
+        }
+      }
+    </script>
+  </body>
+</html>
