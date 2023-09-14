@@ -49,4 +49,3 @@
 
 //     console.log(filteredProducts);
 //   });
-

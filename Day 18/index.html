@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions/varletconst/SynchronousAsyncProgramming/API calls</title>
+  </head>
+  <body>
+    <script>
+      //   const currDate = new Date();
+      const calculateCurrentYear = (date) => {
+        console.log(date);
+        const currYear = date.getFullYear();
+        console.log(currYear);
+      };
+
+      const currDate = new Date();
+      const dateFormatter = (date) => {
+        const currYear = date.getFullYear();
+        const currMonth = date.getMonth();
+        const currDay = date.getDate();
+        const formattedDate = `${currYear}-${currMonth + 1}-${currDay}`;
+        return formattedDate;
+      };
+
+      const d = calculateCurrentYear(currDate);
+      const f = dateFormatter(currDate);
+      document.write(`Copyright @compnay_name ${d}`);
+      document.write(` <br> Current date is ${f}`);
+
+      console.log(dateFormatter(currDate));
+
+      //ECMAScript -ES6 (2016)
+
+      //Hoisting -> Top of scope declaration
+      let x;
+      console.log(x);
+    </script>
+  </body>
+</html>
