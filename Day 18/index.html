@@ -35,6 +35,159 @@
       //Hoisting -> Top of scope declaration
       let x;
       console.log(x);
+
+      //var/let/const
+
+      //var - brings hoisting, can be redeclared, not a block level code
+
+      //let - does not follow hoisting, cannot be redlcared, blocked level
+
+      //const - does not follow hoisting, cannot be reassigned, blocked level
+
+      //Higher order Array method
+
+      const array = [
+        {
+          id: 1,
+          productName: "Phone",
+          description: "loremloremlorem",
+          price: 1000,
+          currency: "USD",
+          address: {
+            city: "Washington",
+            postalCode: 2000,
+          },
+          discountPercent: 20,
+          rating: 3,
+        },
+        {
+          id: 2,
+          productName: "Phone2",
+          description: "loremloremlorem",
+          price: 10000,
+          currency: "MXN",
+          address: {
+            city: "Mexico",
+            postalCode: 3000,
+          },
+          discountPercent: 30,
+          rating: 4,
+        },
+        {
+          id: 3,
+          productName: "Phone3",
+          description: "loremloremlorem",
+          price: 15000,
+          currency: "NPR",
+          address: {
+            city: "Kathmandu",
+            postalCode: 44600,
+          },
+          discountPercent: 70,
+          rating: 1,
+        },
+        {
+          id: 4,
+          productName: "Phone4",
+          description: "loremloremlorem",
+          price: 1000,
+          currency: "MXN",
+          address: {
+            city: "Mexico",
+            postalCode: 1000,
+          },
+          discountPercent: 20,
+          rating: 2,
+        },
+        {
+          id: 5,
+          productName: "Phone5",
+          description: "loremloremlorem",
+          price: 50000,
+          currency: "NPR",
+          address: {
+            city: "Pokhara",
+            postalCode: 10000,
+          },
+          discountPercent: 245,
+          rating: 4,
+        },
+        {
+          id: 6,
+          productName: "Phone6",
+          description: "loremloremlorem",
+          price: 1000,
+          currency: "USD",
+          address: {
+            city: "Washington",
+            postalCode: 1000,
+          },
+          discountPercent: 65,
+          rating: 4.6,
+        },
+      ];
+
+      const filteredCity = array.filter((data) => {
+        if (data.address.city === "Washington") {
+          return data.address.postalCode;
+        }
+      });
+      console.log(filteredCity);
+
+      array.forEach((item) => {
+        console.log(item);
+      });
+
+      const data = array
+        .map((item) => {
+          if (item.price >= 15000) {
+            // return item;
+            return "abc";
+          }
+        })
+        .filter((val) => {
+          return val !== undefined;
+        });
+
+      console.log(data);
+
+      const numbers = [10, 20, 30, 40, 50];
+
+      const filteredData = numbers.filter((num) => {
+        return num < 40;
+      });
+
+      console.log(filteredData);
+
+      const filteredPrice = array.filter((val) => {
+        return val.price > 10000;
+      });
+
+      console.log(filteredPrice);
+
+      const city = array.filter((item) => {
+        return item.address.city === "Kathmandu";
+      });
+      console.log(city);
+
+      const filteredRating = array.filter((val) => {
+        return val.rating < 3;
+      });
+
+      console.log(filteredRating);
+
+      const filteredDiscountPercent = array.filter((val) => {
+        if (val.discountPercent > 50) {
+          return true;
+        }
+      });
+      console.log(filteredDiscountPercent);
+
+      const obj = array.map((item) => {
+        return { name: item.productName, address: item.address.city };
+      });
+
+      console.log(obj);
     </script>
   </body>
 </html>
