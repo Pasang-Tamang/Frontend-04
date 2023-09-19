@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <script>
+      const backendResp = [
+        { firstName: "abc", lastName: "def" },
+        {
+          firstName: "Sita",
+          lastName: "Thapa",
+        },
+      ];
+
+      const newData = backendResp.map((val) => {
+        return { fullname: val.firstName + " " + val.lastName };
+        return { fullName: `${val.firstName}${val.lastName}` };
+      });
+      console.log(newData);
+
+      //HTTP Methods:
+
+      //GET POST UPDATE PUT/PATCH DELETE
+
+      //Internet Working
+
+      fetch("https://dummyjson.com/products", {
+        method: "GET",
+      })
+        .then((val) => {
+          return val.json();
+        })
+        .then((val) => {
+          const filteredProds = val.products.filter((val) => {
+            return val.category === "smartphones";
+          });
+          console.log(filteredProds);
+        });
+
+      fetch("https://dummyjson.com/users")
+        .then((val) => {
+          return val.json();
+        })
+        .then((val) => {
+          const filteredUser = val.users.filter((val) => {
+            return val.hair.color === "Black";
+          });
+
+          console.log(filteredUser);
+        });
+    </script>
+  </body>
+</html>
