@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring/Spread Operator</title>
+  </head>
+  <body>
+    <h1 id="hello-world">Hello World</h1>
+
+    <form action="">
+      <input type="text" id="number" />
+    </form>
+    <script>
+      //Destructuring
+      let { name, age } = {
+        name: "dolma",
+        age: 20,
+      };
+
+      console.log(name, age);
+
+      const { name1, age1, ...data } = {
+        name: "iphone",
+        age: 3,
+        id: 1,
+        productName: "iphone",
+        price: 3600,
+        address: "Kathmandu",
+      };
+      console.log(name1, age1, data);
+
+      const [firstvalue] = [{ name: "abc" }, { name: "test1" }];
+      console.log(firstvalue);
+
+      const [c, d, ...e] = [1, 2, 3, 4, 5];
+      console.log(c, d, e);
+
+      const variable1 = {
+        name: "pasang",
+        age: 21,
+        address: "nuwakot",
+      };
+
+      const variable2 = {
+        id: 1,
+        productName: "iphone",
+        price: 3600,
+        address: "Kathmandu",
+      };
+
+      let variable3 = {
+        ...variable1,
+        ...variable2,
+      };
+      console.log(variable3);
+
+      const arr1 = [
+        {
+          name: "Ram",
+        },
+        {
+          name: "Ram",
+        },
+        {
+          name: "Sita",
+        },
+        {
+          name: "Hari",
+        },
+      ];
+
+      const arr2 = [
+        {
+          name: "Ram",
+        },
+        {
+          name: "Ram",
+        },
+        {
+          name: "Sita",
+        },
+        {
+          name: "Hari",
+        },
+      ];
+
+      console.log([...arr1, arr2]);
+
+      const newData = new Set(arr2);
+      console.log(newData);
+
+      const newArr = arr2.map((val) => {
+        return val.name;
+      });
+
+      console.log(newArr);
+
+      console.log([...new Set(newArr)]);
+
+      const uniqueDatas = [...new Set(newArr)];
+      console.log(uniqueDatas);
+      const newDatas = uniqueDatas.map((val) => {
+        //find returns complete object
+        return arr2.find((item) => {
+          return item.name === val;
+        });
+      });
+      console.log(newDatas);
+
+      const dupArr = [
+        {
+          id: 1,
+          name: "Ram",
+        },
+        {
+          id: 1,
+          name: "Ram",
+        },
+        {
+          id: 2,
+          name: "Sita",
+        },
+        {
+          id: 3,
+          name: "Hari",
+        },
+      ];
+
+      const arr = dupArr
+        .map((item) => {
+          return item.id;
+          //self = [1,1,2,3]
+        })
+        .filter((value, index, self) => {
+          return self.indexOf(value) === index;
+        });
+
+      const arr5 = [
+        {
+          name: "Ram",
+        },
+        {
+          name: "Ram",
+        },
+        {
+          name: "Sita",
+        },
+        {
+          name: "Hari",
+        },
+      ];
+
+      const unique = [];
+      const distinct = [];
+
+      for (let i = 0; i < arr5.length; i++) {
+        let isDistinct = true;
+        for (let j = 0; j < distinct.length; j++) {
+          if (arr5[i].name === distinct[j].name) {
+            isDistinct = false;
+            break;
+          }
+        }
+
+        if (isDistinct) {
+          distinct.push(arr5[i]);
+        }
+      }
+
+      console.log(distinct);
+
+      document.title = "Hey THis is my title";
+      const helloWorld = document.getElementById("hello-world");
+      helloWorld.innerText = "changed title";
+
+      const inputTag = document.getElementById("number");
+      inputTag.value = "10 is not a prime number";
+    </script>
+  </body>
+</html>
