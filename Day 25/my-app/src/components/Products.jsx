@@ -2,11 +2,11 @@ import { Card, Button } from "react-bootstrap";
 export const Products = ({ products }) => {
   console.log(products);
   return (
-    <div className="container d-flex flex-wrap gap-5 mt-5">
+    <div className="container d-flex flex-wrap gap-5 mt-5 ">
       {products.map((prod) => {
         //console.log(prod);
         return (
-          <Card style={{ width: "22rem", height: "400px" }} key={prod.id}>
+          <Card style={{ width: "18rem", height: "400px" }} key={prod.id}>
             <Card.Header style={{ height: "60%" }}>
               <Card.Img src={prod.thumbnail} className="h-100"></Card.Img>
             </Card.Header>
@@ -26,7 +26,7 @@ export const Products = ({ products }) => {
 
             <Card.Footer className="text-center">
               <Button variant="primary" className="me-2">
-                View Details
+                View
               </Button>
               <Button variant="success" className="me-2">
                 Edit

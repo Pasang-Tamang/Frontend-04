@@ -1,6 +1,8 @@
 import { Products } from "./components/Products";
 import Navbar from "./components/Navbar";
 import { Students } from "./components/Student";
+import { Routes, Route } from "react-router-dom";
+import PageNotFound from "./components/PageNotFound";
 
 function AppComponent() {
   const products = [
@@ -2444,9 +2446,16 @@ function AppComponent() {
   ];
   return (
     <>
-      {/* <Navbar />
-      <Products products={products} /> */}
-      <Students students={users} />
+      <Navbar />
+
+      <div className="container">
+        <Routes>
+          <Route path="products" element={<Products products={products} />} />
+          <Route path="users" element={<Students students={users} />} />
+          {/* WildCard Routing */}
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </div>
     </>
   );
 }

@@ -55,6 +55,7 @@ export const Students = ({ students }) => {
               <tr key={student.id}>
                 {Object.values(student).map((value) => {
                   return (
+                    //JSON.Stringify(value)
                     <td key={value}>
                       {typeof value === "object"
                         ? displayObjectData(value)
