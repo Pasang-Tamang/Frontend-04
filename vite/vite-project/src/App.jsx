@@ -5,15 +5,16 @@ import "./App.css";
 import Counter from "./components/Counter";
 import { Routes, Route } from "react-router-dom";
 import Quotes from "./components/Student";
+import Products from "./components/Products";
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <h1>Hello World</h1>
       <Routes>
         <Route path="/" element={<Counter />} />
         <Route path="/quotes" element={<Quotes />} />
+        <Route path="/products" element={<Products />} />
       </Routes>
     </>
   );
