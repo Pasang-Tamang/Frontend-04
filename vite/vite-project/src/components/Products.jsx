@@ -9,6 +9,8 @@ import {
   Button,
 } from "react-bootstrap";
 
+import { useNavigate } from "react-router-dom";
+
 const Products = () => {
   const [products, setProducts] = useState([]);
 
@@ -17,12 +19,11 @@ const Products = () => {
   }, []);
 
   const getProducts = () => {
-    const response = axios
-      .get("https://dummyjson.com/products")
-      .then((response) => {
-        setProducts(response.data.products);
-      });
+    axios.get("https://dummyjson.com/products").then((response) => {
+      setProducts(response.data.products);
+    });
   };
+
   return (
     <div className="d-flex flex-wrap gap-5 justify-content-center">
       {products.map((product) => {

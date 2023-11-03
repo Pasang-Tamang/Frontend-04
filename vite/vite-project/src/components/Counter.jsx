@@ -8,6 +8,18 @@ import {
 } from "react-bootstrap";
 import { useState } from "react";
 const Counter = () => {
+  const arr = [
+    {
+      name: "pa",
+      age: 21,
+    },
+    {
+      name: "rh",
+      place: "sjdfo",
+    },
+  ];
+  console.log(...arr);
+
   let [count, setCount] = useState(0);
 
   //let count = 0;

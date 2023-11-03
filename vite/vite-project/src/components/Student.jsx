@@ -23,7 +23,7 @@ const Student = () => {
 
   //Dependency, bracket ma bhako kura chalesi matra useffect ko kura render huncha
   //   useEffect(() => {
-  //     console.log("Counter Component Page FirstLoad");
+  //     console.log("Counter Component Specific state change");
   //   }, [count]);
 
   const [author, setAuthor] = useState("");
@@ -35,7 +35,7 @@ const Student = () => {
     const { data } = await axios.get("https://dummyjson.com/quotes");
     //console.log(data);
     const { quotes } = data;
-    console.log(quotes);
+    //console.log(quotes);
 
     const qts = quotes.find((quote) => quote.id === id);
     console.log(qts);
